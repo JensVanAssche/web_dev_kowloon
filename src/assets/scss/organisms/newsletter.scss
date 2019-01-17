@@ -1,0 +1,28 @@
+.newsletter {
+    padding: 0 15px;
+    .col-7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font_medium;
+        background-image: url(../src/assets/images/Patroon_A.jpg);
+        padding-top: 25px;
+    }
+
+    .col-5 {
+        background-color: $c500;
+        padding: 35px 30px;
+
+        h2 {
+            font-size: 1.4em;
+        }
+
+        p {
+            color: $c700;
+        }
+    }
+
+    input[type="text"] {
+        width: calc(100% - 46px);
+    }
+}

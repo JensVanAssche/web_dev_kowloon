@@ -1,0 +1,39 @@
+.cookie_alert {
+    position: fixed;
+    z-index: 2;
+    background-color: $cream;
+    width: 100vw;
+    padding: 40px;
+    color: $c300;
+    box-shadow: 0 5px 30px;
+
+    .container {
+        display: flex;
+        
+    }
+
+    img {
+        margin-right: 50px;
+    }
+
+    h1 {
+        color: $orange;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    span.orange_button {
+        background-color: $orange;
+        color: $white;
+        padding: 15px 40px;
+        font-weight: bold;
+        font-size: 1.4em;
+        cursor: pointer;
+    }
+
+    &.closed {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,20 @@
+.tags {
+    display: flex;
+    margin-bottom: 30px;
+    
+
+    h1 {
+        font-family: $font_extralight;
+        color: $c700;
+        margin: 0 10px 0 0;
+    }
+
+    span.tag {
+        margin-right: 10px;
+        background-color: $c200;
+        color: $c700;
+        align-self: center;
+        padding: 2px 15px;
+        border-radius: 2px;
+    }
+}

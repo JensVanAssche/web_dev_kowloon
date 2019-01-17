@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+	background-color: $c300;
+	overflow-x: hidden;
+	color: $white;
+	font-family: $font_regular;
+}
+
+a {
+	color: $white;
+
+	&:hover {
+		color: $white;
+		text-decoration: none;
+	}
+}

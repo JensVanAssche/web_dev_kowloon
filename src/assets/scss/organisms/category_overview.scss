@@ -1,0 +1,15 @@
+.category_overview {
+    .col {
+        border-right: 1px solid $c600;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+    p {
+        font-family: $font_extralight;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
