@@ -1,4 +1,4 @@
-# examen_opdracht_vue
+# web_dev_kowloon
 
 ## Project setup
 ```
