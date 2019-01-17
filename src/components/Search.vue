@@ -10,7 +10,7 @@
                   <b-row>
                       <b-col class="advancedfilter_content_category">
                           <div>
-                              <h2>Category</h2>
+                              <h4 class="title">Category</h4>
                           </div>
                           <div>
                               <label class="checkbox_container">Dogs
@@ -37,7 +37,7 @@
                       </b-col>
                       <b-col>
                           <div>
-                              <h2>Price range</h2>
+                              <h4 class="title">Price range</h4>
                           </div>
                           <div>
                               

@@ -14,27 +14,34 @@
         </div>
       </div>
       <div class="nav_divider"></div>
+      <div class="nav_contact">
+        <router-link to="about" class="d-flex align-items-center">
+          <img src="@/assets/images/contact.png">
+          <span class="ml-1">Contact</span>
+        </router-link>
+      </div>
+      <div class="nav_divider"></div>
       <div class="nav_categories">
-        <a href="/dogarticles" class="d-flex align-items-center">
+        <router-link to="dogarticles" class="d-flex align-items-center">
           <img src="@/assets/images/dog.png">
           <span class="ml-2">Dogs</span>
-        </a>
-        <a href="#" class="d-flex align-items-center">
+        </router-link>
+        <router-link to="catarticles" class="d-flex align-items-center">
           <img src="@/assets/images/cat.png">
           <span class="ml-2">Cats</span>
-        </a>
-        <a href="#" class="d-flex align-items-center">
+        </router-link>
+        <router-link to="fisharticles" class="d-flex align-items-center">
           <img src="@/assets/images/fish.png">
           <span class="ml-2">Fish</span>
-        </a>
-        <a href="#" class="d-flex align-items-center">
+        </router-link>
+        <router-link to="birdarticles" class="d-flex align-items-center">
           <img src="@/assets/images/bird.png">
           <span class="ml-2">Birds</span>
-        </a>
-        <a href="#" class="d-flex align-items-center">
+        </router-link>
+        <router-link to="smallarticles" class="d-flex align-items-center">
           <img src="@/assets/images/hamster.png">
           <span class="ml-2">Small</span><span class="ml-1">animals</span>
-        </a>
+        </router-link>
       </div>
       <div class="flex-grow-1"></div>
       <div class="nav_kowloon">

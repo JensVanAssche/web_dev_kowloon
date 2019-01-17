@@ -109,6 +109,11 @@
               </div> 
             </b-col>
           </b-row>
+          <b-row>
+            <b-col class="d-flex justify-content-end">
+              <span class="emphasis">Visit the store</span>
+            </b-col>
+          </b-row>
           <b-row class="newsletter my-5">
             <b-col cols="7">
               <h1 class="mb-4 text-center">discover amazing<br />

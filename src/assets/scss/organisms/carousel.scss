@@ -1,0 +1,19 @@
+.carousel {
+    position: relative;
+
+    img.carousel_prev {
+        position: absolute;
+        z-index: 1;
+        left: 20px;
+        top: calc(50% - 23px);
+        cursor: pointer;
+    }
+
+    img.carousel_next {
+        position: absolute;
+        z-index: 1;
+        right: 20px;
+        top: calc(50% - 23px);
+        cursor: pointer;
+    }
+}

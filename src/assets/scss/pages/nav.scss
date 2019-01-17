@@ -54,6 +54,31 @@ nav {
 		border-bottom: 3px solid $c300;
 	}
 
+	.nav_contact {
+		padding: 15px 0;
+		cursor: pointer;
+
+		img {
+			width: 60px;
+			padding: 10px 15px;
+		}
+
+		span {
+			color: $c600;
+			font-size: 1.1em;
+		}
+
+		// .nav_search, .nav_faq {
+		// 	&.active {
+		// 		background-color: $white;
+
+		// 		img, span {
+		// 			filter: brightness(50%);
+		// 		}
+		// 	}
+		// }
+	}
+
 	.nav_categories {
 		padding: 15px 0;
 
@@ -64,7 +89,7 @@ nav {
 				filter: brightness(0) invert(1);
 			}
 
-			&:hover img {
+			&:hover img, &.router-link-exact-active img {
 				filter: brightness(1);
 			}
 		}

@@ -1,0 +1,28 @@
+.article_filter {
+    .article_filter_header {
+        cursor: pointer;
+
+        img {
+            transform: rotate(-90deg);
+            transition: 0.4s;
+        }
+        
+        &.opened {
+            img {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .article_filter_content {
+        border-bottom: 1px solid $c400;
+        overflow: hidden;
+        max-height: 150px;
+        transition: 0.4s;
+
+        &.closed {
+            transition: 0.4s;
+            max-height: 0;
+        }
+    }
+}

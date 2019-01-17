@@ -1,6 +1,5 @@
-.itemthumbnail {
+.bigitemthumbnail {
     background-color: $c400;
-    border: 1px solid $c550;
     padding: 5px;
     margin: 0 5px 20px 5px;
 
@@ -21,11 +20,31 @@
 
     .itemthumbnail-details {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         padding: 5px 10px 0 10px;
 
-        span:first-child {
+        h1 {
+            font-size: 1.75em;
             font-weight: bold;
+            margin: 5px 0;
+        }
+
+        p {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .pinkbutton {
+                background-color: $pink;
+                padding: 5px 20px;
+                font-weight: bold;
+                cursor: pointer;
+            }
         }
     }
 
