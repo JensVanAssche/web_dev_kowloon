@@ -40,14 +40,25 @@
           <b-col cols="6" class="mb-4">
             <div class="tags mb-2">
                 <h1>K</h1>
-                <span class="tag">Dogs</span>
-                <span class="tag">Splash 'n Fun</span>
+                <div class="tag">
+                    <div class="tag-arrow"></div>
+                    <div class="tag-body">
+                        <div class="tag-color-pink"></div>
+                        <span>Dogs</span>
+                    </div>
+                </div>
+                <div class="tag">
+                    <div class="tag-arrow"></div>
+                    <div class="tag-body">
+                        <span>Splash 'n Fun</span>
+                    </div>
+                </div>
             </div>
             <h1 class="title">COOLING MAT</h1>
             <h3 class="title mb-4">€ 15,49</h3>
             <h4 class="title">Colors</h4>
             <h4 class="title">Description</h4>
-            <p>
+            <p class="mb-4">
                 Hier komt een de volledige beschrijvende tekst met een max. aantal karakters. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea clit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat consectetur.
             </p>
             <div>
@@ -74,7 +85,7 @@
                 </div>
             </b-col>
         </b-row>
-        <b-row class="mb-5">
+        <b-row>
             <b-col>
                 <h2 class="title">GERELATEERDE PRODUCTEN</h2>
                 <div class="carousel">
@@ -162,6 +173,11 @@
                 </div>
             </b-col>
         </b-row>
+        <b-row class="mb-5">
+            <b-col class="d-flex justify-content-end">
+                <router-link to="dogarticles" class="emphasis">view more</router-link>
+            </b-col>
+        </b-row>
         <b-row>
             <b-col>
                 <h2 class="title">FREQUENTLY ASKED QUESTIONS</h2>
@@ -194,7 +210,12 @@
                 </div>
             </b-col>
         </b-row>
-        <b-row class="newsletter my-5 px-3">
+        <b-row>
+            <b-col class="d-flex justify-content-end">
+                <router-link to="about" class="emphasis">More questions?</router-link>
+            </b-col>
+        </b-row>
+        <b-row class="newsletter my-3 px-3">
             <b-col cols="7">
               <h1 class="mb-4 text-center">discover amazing<br />
                 Kowloon deals!

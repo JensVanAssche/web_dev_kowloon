@@ -1,20 +1,48 @@
 .tags {
     display: flex;
+    align-items: center;
     margin-bottom: 30px;
     
-
     h1 {
         font-family: $font_extralight;
         color: $c700;
         margin: 0 10px 0 0;
     }
 
-    span.tag {
-        margin-right: 10px;
-        background-color: $c200;
-        color: $c700;
-        align-self: center;
-        padding: 2px 15px;
-        border-radius: 2px;
+    .tag {
+        display: flex;
+        align-items: center;
+
+        .tag-arrow {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 11px 10px 11px 0;
+            border-color: transparent #323232 transparent transparent;
+        }
+
+        .tag-body {
+            display: flex;
+            align-items: center;
+
+            margin-right: 10px;
+            background-color: $c200;
+            color: $c700;
+            align-self: center;
+            padding: 0 3px;
+            border-radius: 2px;
+
+            .tag-color-pink {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $pink;
+                margin: 0 5px;
+            }
+
+            span {
+                margin: 0 5px;
+            }
+        }
     }
 }

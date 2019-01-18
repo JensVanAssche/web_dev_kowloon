@@ -5,7 +5,7 @@
     <Navigation></Navigation>
     <main>
       <div class="header">
-        <carousel :per-page="1">
+        <carousel :per-page="1" :autoplay="true" :loop="true" :autoplayHoverPause="false" :autoplayTimeout="5000">
           <slide>
             <img src="@/assets/images/kowloon_logo.png">
             <img src="@/assets/images/banner1_filter.png">
@@ -19,6 +19,10 @@
             <img src="@/assets/images/banner1_filter.png">
           </slide>
         </carousel>
+        <div class="carousel-progession">
+          <div class="carousel-progession-bar"></div>
+          <div class="carousel-progession-progress"></div>
+        </div>
       </div>
       <div class="content">
         <b-container>
@@ -26,8 +30,19 @@
             <b-col>
               <div class="tags">
                 <h1>K</h1>
-                <span class="tag">Dogs</span>
-                <span class="tag">Splash 'n Fun</span>
+                <div class="tag">
+                    <div class="tag-arrow"></div>
+                    <div class="tag-body">
+                        <div class="tag-color-pink"></div>
+                        <span>Dogs</span>
+                    </div>
+                </div>
+                <div class="tag">
+                    <div class="tag-arrow"></div>
+                    <div class="tag-body">
+                        <span>Splash 'n Fun</span>
+                    </div>
+                </div>
               </div>
               <h1 class="title mb-4">DOG ARTICLES.</h1>
             </b-col>
@@ -86,15 +101,18 @@
           </b-row>
           <b-row>
               <b-col cols="12" class="d-flex justify-content-between align-items-center">
-                  <select name="articles">
-                      <option value="">Sort by relevance</option>
-                      <option value="">Price: low to high</option>
-                      <option value="">Price: high to low</option>
-                      <option value="">Latest</option>
-                      <option value="">Oldest</option>
-                  </select>
+                  <ul class="select-dropdown closed">
+                    <li class="select-selected">{{ selectOption }}</li>
+                    <div class="select-options">
+                        <li>Sort by relevance</li>
+                        <li>Price: low to high</li>
+                        <li>Price: high to low</li>
+                        <li>Latest</li>
+                        <li>Oldest</li>
+                    </div>
+                  </ul>
                   <div>
-                      <span>Dog items: 5 of 56</span>
+                    <span><span class="text-grey">Dog items: </span><span class="font-weight-bold">5 of 56</span></span>
                   </div>
               </b-col>
           </b-row>
@@ -225,17 +243,22 @@ export default {
                 backgroundColor: "#fff"
             }
         },
-        slidervalue: [8, 499]
+        slidervalue: [8, 499],
+        selectOption: "Sort by relevance"
     }
   },
   methods: {
     filterOnClick: function () {
         document.querySelector(".article_filter_header").classList.toggle("opened");
         document.querySelector(".article_filter_content").classList.toggle("closed");
+    },
+    selectOnClick: function () {
+        document.querySelector(".select-dropdown").classList.toggle("closed");
     }
   },
   mounted: function() {
     document.querySelector(".article_filter_header").addEventListener('click', this.filterOnClick);
+    document.querySelector(".select-selected").addEventListener('click', this.selectOnClick);
   }
 }
 </script>

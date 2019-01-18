@@ -4,9 +4,9 @@
     <FAQ></FAQ>
     <Navigation></Navigation>
     <main>
-      <div class="header">
+      <div class="header image_header">
         <img src="@/assets/images/kowloon_logo.png" class="header_logo">
-        <img src="@/assets/images/banner2.png" class="image">
+        <img src="@/assets/images/banner2.png">
       </div>
       <div class="content">
         <b-container>
@@ -14,7 +14,12 @@
             <b-col>
               <div class="tags">
                 <h1>K</h1>
-                <span class="tag">about us</span>
+                <div class="tag">
+                    <div class="tag-arrow"></div>
+                    <div class="tag-body">
+                        <span>about us</span>
+                    </div>
+                </div>
               </div>
               <h1 class="title mb-4">ABOUT US</h1>
             </b-col>

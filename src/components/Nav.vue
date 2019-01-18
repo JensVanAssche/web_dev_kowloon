@@ -45,8 +45,10 @@
       </div>
       <div class="flex-grow-1"></div>
       <div class="nav_kowloon">
+        <router-link to="/">
         <span class="active">K</span>
         <span>KOWLOON</span>
+        </router-link>
       </div>
     </nav>
 </template>

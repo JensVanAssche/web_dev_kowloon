@@ -6,7 +6,7 @@
     <Navigation></Navigation>
     <main>
       <div class="header">
-        <carousel :per-page="1">
+        <carousel :per-page="1" :autoplay="true" :loop="true" :autoplayHoverPause="false" :autoplayTimeout="5000">
           <slide>
             <img src="@/assets/images/kowloon_logo.png">
             <img src="@/assets/images/banner1_filter.png">
@@ -20,6 +20,10 @@
             <img src="@/assets/images/banner1_filter.png">
           </slide>
         </carousel>
+        <div class="carousel-progession">
+          <div class="carousel-progession-bar"></div>
+          <div class="carousel-progession-progress"></div>
+        </div>
       </div>
       <div class="content">
         <b-container>
@@ -136,7 +140,7 @@
           </b-row>
           <b-row>
             <b-col class="d-flex justify-content-end">
-              <span class="emphasis">Visit the store</span>
+              <router-link to="dogarticles" class="emphasis">Visit the store</router-link>
             </b-col>
           </b-row>
           <b-row class="newsletter my-5">
