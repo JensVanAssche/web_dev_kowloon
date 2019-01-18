@@ -11,11 +11,13 @@
         background: url("../src/assets/images/select.png") 96% / 5% no-repeat $c500;
         appearance: none;
         cursor: pointer;
+        width: 170px;
     }
 
     .select-options {
         position: absolute;
         z-index: 1;
+        width: 170px;
         
         li {
             background-color: $white;
@@ -27,12 +29,6 @@
             &:hover {
                 background-color: $c750;
             }
-        }
-    }
-
-    &.closed {
-        .select-options {
-            display: none;
         }
     }
 }

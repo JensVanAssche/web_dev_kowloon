@@ -82,16 +82,7 @@
           </b-row>
           <b-row>
               <b-col cols="12" class="d-flex justify-content-between align-items-center">
-                  <ul class="select-dropdown closed">
-                    <li class="select-selected">{{ selectOption }}</li>
-                    <div class="select-options">
-                        <li>Sort by relevance</li>
-                        <li>Price: low to high</li>
-                        <li>Price: high to low</li>
-                        <li>Latest</li>
-                        <li>Oldest</li>
-                    </div>
-                  </ul>
+                  <SelectBox></SelectBox>
                   <div>
                     <span><span class="text-grey">Dog items: </span><span class="font-weight-bold">5 of 56</span></span>
                   </div>
@@ -137,6 +128,7 @@ import HeaderCarousel from '@/components/HeaderCarousel.vue';
 import ItemThumbnailSmall from '@/components/ItemThumbnailSmall.vue';
 import ItemThumbnailMultiple from '@/components/ItemThumbnailMultiple.vue';
 import ItemThumbnailBig from '@/components/ItemThumbnailBig.vue';
+import SelectBox from '@/components/SelectBox.vue';
 
 export default {
   name: 'dogarticles',
@@ -148,7 +140,8 @@ export default {
     HeaderCarousel,
     ItemThumbnailSmall,
     ItemThumbnailMultiple,
-    ItemThumbnailBig
+    ItemThumbnailBig,
+    SelectBox
   },
   data () {
     return {
