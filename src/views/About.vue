@@ -43,33 +43,7 @@
               </div>
               <div>
                   <h2 class="title">FREQUENTLY ASKED QUESTIONS</h2>
-                  <div class="faq-question mb-2 collapsed">
-                    <div class="faq-header">
-                      <p>Dit is een vraag</p>
-                      <img src="@/assets/images/dropdown.png" alt="">
-                    </div>
-                    <div class="faq-content">
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</span>
-                    </div>
-                  </div>
-                  <div class="faq-question mb-2 collapsed">
-                    <div class="faq-header">
-                      <p>Dit is een vraag</p>
-                      <img src="@/assets/images/dropdown.png" alt="">
-                    </div>
-                    <div class="faq-content">
-                      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</span>
-                    </div>
-                  </div>
-                <div class="faq-question mb-2 collapsed">
-                  <div class="faq-header">
-                    <p>Dit is een vraag</p>
-                    <img src="@/assets/images/dropdown.png" alt="">
-                  </div>
-                  <div class="faq-content">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</span>
-                  </div>
-                </div>
+                  <FAQquestions></FAQquestions>
               </div>
             </b-col>
             <b-col cols="4">
@@ -93,21 +67,15 @@
 import Navigation from '@/components/Nav.vue';
 import Search from '@/components/Search.vue';
 import FAQ from '@/components/FAQ.vue';
+import FAQquestions from '@/components/FAQquestions.vue';
 
 export default {
   name: 'about',
   components: {
     Navigation,
     Search,
-    FAQ
-  },
-  methods: {
-    faqOnClick: function () {
-      document.querySelector(".faq-question").classList.toggle("collapsed");
-    }
-  },
-  mounted: function() {
-    document.querySelector(".faq-header").addEventListener('click', this.faqOnClick);
+    FAQ,
+    FAQquestions
   }
 }
 </script>

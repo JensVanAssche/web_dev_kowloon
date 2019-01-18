@@ -4,26 +4,7 @@
     <FAQ></FAQ>
     <Navigation></Navigation>
     <main>
-      <div class="header">
-        <carousel :per-page="1" :autoplay="true" :loop="true" :autoplayHoverPause="false" :autoplayTimeout="5000">
-          <slide>
-            <img src="@/assets/images/kowloon_logo.png">
-            <img src="@/assets/images/banner1_filter.png">
-          </slide>
-          <slide>
-            <img src="@/assets/images/kowloon_logo.png">
-            <img src="@/assets/images/banner1_filter.png">
-          </slide>
-          <slide>
-            <img src="@/assets/images/kowloon_logo.png">
-            <img src="@/assets/images/banner1_filter.png">
-          </slide>
-        </carousel>
-        <div class="carousel-progession">
-          <div class="carousel-progession-bar"></div>
-          <div class="carousel-progession-progress"></div>
-        </div>
-      </div>
+      <HeaderCarousel></HeaderCarousel>
       <div class="content">
         <b-container>
           <b-row>
@@ -117,93 +98,26 @@
               </b-col>
           </b-row>
           <b-row no-gutters>
-              <b-col col="6">
+              <b-col cols="6">
                   <b-row no-gutters>
                       <b-col cols="6">
-                        <div class="itemthumbnail">
-                            <div class="itemthumbnail-image">
-                            <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                <img src="@/assets/images/information.png" alt="">
-                                <span>view details</span>
-                            </router-link>
-                            </div>
-                            <div class="itemthumbnail-details">
-                                <span>Cooling mat</span>
-                                <span>€ 15,49</span>
-                            </div>
-                        </div>
+                        <ItemThumbnailSmall :details="true"></ItemThumbnailSmall>
                       </b-col>
                       <b-col cols="6">
-                        <div class="itemthumbnail">
-                            <div class="itemthumbnail-image">
-                            <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                <img src="@/assets/images/information.png" alt="">
-                                <span>view details</span>
-                            </router-link>
-                            </div>
-                            <div class="itemthumbnail-details">
-                                <span>Cooling mat</span>
-                                <span>€ 15,49</span>
-                            </div>
-                        </div>
+                        <ItemThumbnailSmall :details="true"></ItemThumbnailSmall>
                       </b-col>
                       <b-col cols="6">
-                        <div class="itemthumbnail">
-                            <div class="itemthumbnail-image">
-                            <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                <img src="@/assets/images/information.png" alt="">
-                                <span>view details</span>
-                            </router-link>
-                            </div>
-                            <div class="itemthumbnail-details">
-                                <span>Cooling mat</span>
-                                <span>€ 15,49</span>
-                            </div>
-                        </div>
+                        <ItemThumbnailSmall :details="true"></ItemThumbnailSmall>
                       </b-col>
                       <b-col cols="6">
-                        <div class="itemthumbnail-multiple">
-                            <div class="itemthumbnail-image">
-                            <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <span class="item-count">4</span>
-                            <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                <img src="@/assets/images/information.png" alt="">
-                                <span>view details</span>
-                            </router-link>
-                            </div>
-                            <div class="itemthumbnail-details">
-                            <span>Cooling mat</span>
-                            <span>€ 15,49</span>
-                            </div>
-                            <div class="multiple-1"></div>
-                            <div class="multiple-2"></div>
-                        </div>
-                       </b-col>
+                        <ItemThumbnailMultiple></ItemThumbnailMultiple>
+                      </b-col>
                   </b-row>
               </b-col>
-              <b-col col="6">
+              <b-col cols="6">
                   <b-row>
                       <b-col cols="12">
-                        <div class="bigitemthumbnail">
-                        <div class="itemthumbnail-image">
-                        <img src="@/assets/images/cooling_mat_big.png" alt="">
-                        <router-link to="coolingmat" class="itemthumbnail-overlay">
-                            <img src="@/assets/images/information.png" alt="">
-                            <span>view details</span>
-                        </router-link>
-                        </div>
-                        <div class="itemthumbnail-details">
-                            <h1>Cooling mat</h1>
-                            <p>Hier komt een deel van de beschrijvende tekst die bij elk product hoort. Ook terug te vinden in het product detail.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius....</p>
-                            <div>
-                                <span>€ 15,49</span>
-                                <router-link to="coolingmat" class="pinkbutton">Want to know more?</router-link>
-                            </div>
-                        </div>
-                        </div>
+                        <ItemThumbnailBig></ItemThumbnailBig>
                       </b-col>
                   </b-row>
               </b-col>
@@ -219,6 +133,10 @@ import Navigation from '@/components/Nav.vue';
 import Search from '@/components/Search.vue';
 import FAQ from '@/components/FAQ.vue';
 import vueSlider from 'vue-slider-component';
+import HeaderCarousel from '@/components/HeaderCarousel.vue';
+import ItemThumbnailSmall from '@/components/ItemThumbnailSmall.vue';
+import ItemThumbnailMultiple from '@/components/ItemThumbnailMultiple.vue';
+import ItemThumbnailBig from '@/components/ItemThumbnailBig.vue';
 
 export default {
   name: 'dogarticles',
@@ -226,7 +144,11 @@ export default {
     Navigation,
     Search,
     FAQ,
-    vueSlider
+    vueSlider,
+    HeaderCarousel,
+    ItemThumbnailSmall,
+    ItemThumbnailMultiple,
+    ItemThumbnailBig
   },
   data () {
     return {

@@ -1,37 +1,22 @@
 .faq-question {
     background-color: $c550;
     padding: 15px 20px;
-    overflow: hidden;
-    max-height: 136px;
-    
-    transition: 0.4s;
+    cursor: pointer;
 
     .faq-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 10px;
-        cursor: pointer;
 
         p {
             font-weight: bold;
             margin: 0;
         }
-
-        img { transition: 0.4s; }
     }
 
     .faq-content {
         span { font-size: 0.75em; }
         margin-left: 25px;
-    }
-
-    &.collapsed {
-        max-height: 50px;
-
-        .faq-header img {
-            transform: rotate(-90deg);
-            transition: 0.4s;
-        }
     }
 }

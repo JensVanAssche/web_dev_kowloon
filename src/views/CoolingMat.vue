@@ -93,81 +93,25 @@
                     <img src="@/assets/images/carousel_next.png" class="carousel_next" alt="">
                     <carousel :per-page="4" :paginationEnabled="false" :scrollPerPage="false" :navigate-to="activeSlide" >
                         <slide>
-                            <div class="itemthumbnail">
-                                <div class="itemthumbnail-image">
-                                    <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                        <img src="@/assets/images/information.png" alt="">
-                                        <span>view details</span>
-                                    </router-link>
-                                </div>
-                            </div>
+                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <div class="itemthumbnail">
-                                <div class="itemthumbnail-image">
-                                    <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                        <img src="@/assets/images/information.png" alt="">
-                                        <span>view details</span>
-                                    </router-link>
-                                </div>
-                            </div>
+                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <div class="itemthumbnail">
-                                <div class="itemthumbnail-image">
-                                    <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                        <img src="@/assets/images/information.png" alt="">
-                                        <span>view details</span>
-                                    </router-link>
-                                </div>
-                            </div>
+                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <div class="itemthumbnail">
-                                <div class="itemthumbnail-image">
-                                    <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                        <img src="@/assets/images/information.png" alt="">
-                                        <span>view details</span>
-                                    </router-link>
-                                </div>
-                            </div>
+                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <div class="itemthumbnail">
-                                <div class="itemthumbnail-image">
-                                    <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                        <img src="@/assets/images/information.png" alt="">
-                                        <span>view details</span>
-                                    </router-link>
-                                </div>
-                            </div>
+                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <div class="itemthumbnail">
-                                <div class="itemthumbnail-image">
-                                    <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                        <img src="@/assets/images/information.png" alt="">
-                                        <span>view details</span>
-                                    </router-link>
-                                </div>
-                            </div>
+                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <div class="itemthumbnail">
-                                <div class="itemthumbnail-image">
-                                    <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
-                                        <img src="@/assets/images/information.png" alt="">
-                                        <span>view details</span>
-                                    </router-link>
-                                </div>
-                            </div>
+                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
                         </slide>
                     </carousel>
                 </div>
@@ -181,33 +125,7 @@
         <b-row>
             <b-col>
                 <h2 class="title">FREQUENTLY ASKED QUESTIONS</h2>
-                <div class="faq-question mb-2 collapsed">
-                    <div class="faq-header">
-                        <p>Dit is een vraag</p>
-                        <img src="@/assets/images/dropdown.png" alt="">
-                    </div>
-                    <div class="faq-content">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</span>
-                    </div>
-                </div>
-                <div class="faq-question mb-2 collapsed">
-                    <div class="faq-header">
-                        <p>Dit is een vraag</p>
-                        <img src="@/assets/images/dropdown.png" alt="">
-                    </div>
-                    <div class="faq-content">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</span>
-                    </div>
-                </div>
-                <div class="faq-question mb-2 collapsed">
-                    <div class="faq-header">
-                        <p>Dit is een vraag</p>
-                        <img src="@/assets/images/dropdown.png" alt="">
-                    </div>
-                    <div class="faq-content">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..Lorem ipsum dolor sit amet, consectetur adipisicing elit..</span>
-                    </div>
-                </div>
+                <FAQquestions></FAQquestions>
             </b-col>
         </b-row>
         <b-row>
@@ -215,22 +133,7 @@
                 <router-link to="about" class="emphasis">More questions?</router-link>
             </b-col>
         </b-row>
-        <b-row class="newsletter my-3 px-3">
-            <b-col cols="7">
-              <h1 class="mb-4 text-center">discover amazing<br />
-                Kowloon deals!
-              </h1>
-              <h4>only in our newsletter</h4>
-            </b-col>
-            <b-col cols="5">
-              <h2>Subscribe to our newsletter</h2>
-              <p>Lorum ipsum dolor sit amet.</p>
-              <form>
-                <input type="text" class="button" placeholder="name@domain.com" v-model="email">
-                <input type="button" value="OK" class="greybutton">
-              </form>
-            </b-col>
-          </b-row>
+        <NewsLetter class="my-3 mx-1"></NewsLetter>
       </b-container>
     </main>
   </div>
@@ -240,7 +143,10 @@
 import Navigation from '@/components/Nav.vue';
 import Search from '@/components/Search.vue';
 import FAQ from '@/components/FAQ.vue';
+import FAQquestions from '@/components/FAQquestions.vue';
+import NewsLetter from '@/components/NewsLetter.vue';
 import { Carousel, Slide } from 'vue-carousel';
+import ItemThumbnailSmall from '@/components/ItemThumbnailSmall.vue';
 
 export default {
   name: 'coolingmat',
@@ -276,8 +182,11 @@ export default {
     Navigation,
     Search,
     FAQ,
+    FAQquestions,
+    NewsLetter,
     Carousel,
-    Slide
+    Slide,
+    ItemThumbnailSmall
   },
   methods: {
     faqOnClick: function () {
