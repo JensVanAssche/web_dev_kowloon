@@ -5,7 +5,7 @@
     bottom: 0;
     left: 60px;
     background-color: $c800;
-    z-index: 1;
+    z-index: 10;
     color: $black;
     padding-top: 20px;
 
@@ -15,7 +15,7 @@
 
     .advancedfilter {
         margin-bottom: 100px;
-        max-height: 120px;
+        max-height: 180px;
         transition: 0.4s;
         overflow: hidden;
 
@@ -33,6 +33,7 @@
     
             img {
                 filter: brightness(0.6);
+                transition: 0.4s;
             }
         }
     
@@ -40,6 +41,25 @@
             .advancedfilter_content_category {
                 margin-left: 40px;
             }
+
+            .advancedfilter_content_slider {
+                .priceinput {
+                    position: relative;
+                    input {
+                        width: 200px;
+                    }
+        
+                    span {
+                        color: $black;
+                        position: absolute;
+                        top: calc(50% - 12px);
+                        left: 15px;
+                    }
+                }
+            }
+
+
+            
         }
 
         &.closed {
@@ -47,6 +67,7 @@
 
             img {
                 transform: rotate(-90deg);
+                transition: 0.4s;
             }
         }
     }

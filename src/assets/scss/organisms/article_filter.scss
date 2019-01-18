@@ -17,12 +17,26 @@
     .article_filter_content {
         border-bottom: 1px solid $c400;
         overflow: hidden;
-        max-height: 150px;
+        max-height: 175px;
         transition: 0.4s;
 
         &.closed {
             transition: 0.4s;
             max-height: 0;
+        }
+
+        .priceinput {
+            position: relative;
+            input {
+                width: 150px;
+            }
+
+            span {
+                color: $black;
+                position: absolute;
+                top: calc(50% - 12px);
+                left: 15px;
+            }
         }
     }
 }

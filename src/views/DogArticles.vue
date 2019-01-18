@@ -63,7 +63,24 @@
                         </label>
                       </div>
                       <h4 class="title">Price range</h4>
-                      <div class="mb-5"></div>
+                      <div class="mb-5">
+                          <b-row>
+                            <b-col class="mt-2">
+                                <vueSlider v-model="slidervalue" v-bind="options"></vueSlider>  
+                            </b-col>
+                            <b-col class="d-flex align-items-center">
+                                <div class="priceinput mr-4">
+                                    <input type="text" v-model="slidervalue[0]" class="px-5">
+                                    <span>€</span>
+                                </div>
+                                -
+                                <div class="priceinput ml-4">
+                                    <input type="text" v-model="slidervalue[1]" class="px-5">
+                                    <span>€</span>
+                                </div>
+                            </b-col>
+                          </b-row>
+                      </div>
                   </div>
               </b-col>
           </b-row>
@@ -130,18 +147,21 @@
                         </div>
                       </b-col>
                       <b-col cols="6">
-                        <div class="itemthumbnail">
+                        <div class="itemthumbnail-multiple">
                             <div class="itemthumbnail-image">
                             <img src="@/assets/images/cooling_mat_small.png" alt="">
+                            <span class="item-count">4</span>
                             <router-link to="coolingmat" class="itemthumbnail-overlay">
                                 <img src="@/assets/images/information.png" alt="">
                                 <span>view details</span>
                             </router-link>
                             </div>
                             <div class="itemthumbnail-details">
-                                <span>Cooling mat</span>
-                                <span>€ 15,49</span>
+                            <span>Cooling mat</span>
+                            <span>€ 15,49</span>
                             </div>
+                            <div class="multiple-1"></div>
+                            <div class="multiple-2"></div>
                         </div>
                        </b-col>
                   </b-row>
@@ -180,18 +200,33 @@
 import Navigation from '@/components/Nav.vue';
 import Search from '@/components/Search.vue';
 import FAQ from '@/components/FAQ.vue';
+import vueSlider from 'vue-slider-component';
 
 export default {
   name: 'dogarticles',
-  data: function() {
-    return {
-      
-    }
-  },
   components: {
     Navigation,
     Search,
-    FAQ
+    FAQ,
+    vueSlider
+  },
+  data () {
+    return {
+        options: {
+            enableCross: true,
+            tooltip: false,
+            min: 8,
+            max: 499,
+            height: 4,
+            processStyle: {
+                backgroundColor: '#9a9a9a'
+            },
+            bgStyle: {
+                backgroundColor: "#fff"
+            }
+        },
+        slidervalue: [8, 499]
+    }
   },
   methods: {
     filterOnClick: function () {

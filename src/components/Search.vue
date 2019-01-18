@@ -35,12 +35,25 @@
                               </label>
                           </div>
                       </b-col>
-                      <b-col>
+                      <b-col class="advancedfilter_content_slider">
                           <div>
                               <h4 class="title">Price range</h4>
                           </div>
                           <div>
-                              
+                              <div class="mb-3">
+                                  <vueSlider v-model="slidervalue" v-bind="options"></vueSlider>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-between">
+                                <div class="priceinput mr-4">
+                                    <input type="text" v-model="slidervalue[0]" class="px-5">
+                                    <span>€</span>
+                                </div>
+                                -
+                                <div class="priceinput ml-4">
+                                    <input type="text" v-model="slidervalue[1]" class="px-5">
+                                    <span>€</span>
+                                </div>
+                              </div>
                           </div>
                       </b-col>
                   </b-row>
@@ -59,8 +72,35 @@
 </template>
 
 <script>
+import vueSlider from 'vue-slider-component';
+
+
 export default {
     name: 'search',
+    components: {
+        vueSlider
+    },
+    data () {
+        return {
+            options: {
+                enableCross: true,
+                tooltip: false,
+                min: 8,
+                max: 499,
+                height: 4,
+                processStyle: {
+                    backgroundColor: '#9a9a9a'
+                },
+                bgStyle: {
+                    backgroundColor: "#cccccc"
+                },
+                sliderStyle: {
+                    backgroundColor: '#000000'
+                }
+            },
+            slidervalue: [8, 499]
+        }
+    },
     methods: {
         searchOnClick: function () {
             document.querySelector(".search").classList.toggle("closed");

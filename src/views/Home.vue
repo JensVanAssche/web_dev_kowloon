@@ -116,9 +116,10 @@
               </div>
             </b-col>
             <b-col cols="3">
-              <div class="itemthumbnail">
+              <div class="itemthumbnail-multiple">
                 <div class="itemthumbnail-image">
                   <img src="@/assets/images/cooling_mat_small.png" alt="">
+                  <span class="item-count">4</span>
                   <router-link to="coolingmat" class="itemthumbnail-overlay">
                     <img src="@/assets/images/information.png" alt="">
                     <span>view details</span>
@@ -128,7 +129,9 @@
                   <span>Cooling mat</span>
                   <span>€ 15,49</span>
                 </div>
-              </div> 
+                <div class="multiple-1"></div>
+                <div class="multiple-2"></div>
+              </div>
             </b-col>
           </b-row>
           <b-row>
