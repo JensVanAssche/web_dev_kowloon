@@ -5,8 +5,20 @@
     <Navigation></Navigation>
     <main>
       <div class="header">
-        <img src="@/assets/images/kowloon_logo.png" class="header_logo">
-        <img src="@/assets/images/banner1_filter.png" class="image">
+        <carousel :per-page="1">
+          <slide>
+            <img src="@/assets/images/kowloon_logo.png">
+            <img src="@/assets/images/banner1_filter.png">
+          </slide>
+          <slide>
+            <img src="@/assets/images/kowloon_logo.png">
+            <img src="@/assets/images/banner1_filter.png">
+          </slide>
+          <slide>
+            <img src="@/assets/images/kowloon_logo.png">
+            <img src="@/assets/images/banner1_filter.png">
+          </slide>
+        </carousel>
       </div>
       <div class="content">
         <b-container>
@@ -76,10 +88,10 @@
                         <div class="itemthumbnail">
                             <div class="itemthumbnail-image">
                             <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <div class="itemthumbnail-overlay">
+                            <router-link to="coolingmat" class="itemthumbnail-overlay">
                                 <img src="@/assets/images/information.png" alt="">
                                 <span>view details</span>
-                            </div>
+                            </router-link>
                             </div>
                             <div class="itemthumbnail-details">
                                 <span>Cooling mat</span>
@@ -91,10 +103,10 @@
                         <div class="itemthumbnail">
                             <div class="itemthumbnail-image">
                             <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <div class="itemthumbnail-overlay">
+                            <router-link to="coolingmat" class="itemthumbnail-overlay">
                                 <img src="@/assets/images/information.png" alt="">
                                 <span>view details</span>
-                            </div>
+                            </router-link>
                             </div>
                             <div class="itemthumbnail-details">
                                 <span>Cooling mat</span>
@@ -106,10 +118,10 @@
                         <div class="itemthumbnail">
                             <div class="itemthumbnail-image">
                             <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <div class="itemthumbnail-overlay">
+                            <router-link to="coolingmat" class="itemthumbnail-overlay">
                                 <img src="@/assets/images/information.png" alt="">
                                 <span>view details</span>
-                            </div>
+                            </router-link>
                             </div>
                             <div class="itemthumbnail-details">
                                 <span>Cooling mat</span>
@@ -121,10 +133,10 @@
                         <div class="itemthumbnail">
                             <div class="itemthumbnail-image">
                             <img src="@/assets/images/cooling_mat_small.png" alt="">
-                            <div class="itemthumbnail-overlay">
+                            <router-link to="coolingmat" class="itemthumbnail-overlay">
                                 <img src="@/assets/images/information.png" alt="">
                                 <span>view details</span>
-                            </div>
+                            </router-link>
                             </div>
                             <div class="itemthumbnail-details">
                                 <span>Cooling mat</span>
@@ -140,17 +152,17 @@
                         <div class="bigitemthumbnail">
                         <div class="itemthumbnail-image">
                         <img src="@/assets/images/cooling_mat_big.png" alt="">
-                        <div class="itemthumbnail-overlay">
+                        <router-link to="coolingmat" class="itemthumbnail-overlay">
                             <img src="@/assets/images/information.png" alt="">
                             <span>view details</span>
-                        </div>
+                        </router-link>
                         </div>
                         <div class="itemthumbnail-details">
                             <h1>Cooling mat</h1>
                             <p>Hier komt een deel van de beschrijvende tekst die bij elk product hoort. Ook terug te vinden in het product detail.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius....</p>
                             <div>
                                 <span>€ 15,49</span>
-                                <span class="pinkbutton">Want to know more?</span>
+                                <router-link to="coolingmat" class="pinkbutton">Want to know more?</router-link>
                             </div>
                         </div>
                         </div>

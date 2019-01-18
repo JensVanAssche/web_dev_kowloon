@@ -6,38 +6,60 @@
     <Navigation></Navigation>
     <main>
       <div class="header">
-        <img src="@/assets/images/kowloon_logo.png" class="header_logo">
-        <img src="@/assets/images/banner1_filter.png" class="image">
+        <carousel :per-page="1">
+          <slide>
+            <img src="@/assets/images/kowloon_logo.png">
+            <img src="@/assets/images/banner1_filter.png">
+          </slide>
+          <slide>
+            <img src="@/assets/images/kowloon_logo.png">
+            <img src="@/assets/images/banner1_filter.png">
+          </slide>
+          <slide>
+            <img src="@/assets/images/kowloon_logo.png">
+            <img src="@/assets/images/banner1_filter.png">
+          </slide>
+        </carousel>
       </div>
       <div class="content">
         <b-container>
           <b-row class="my-5">
             <b-col cols="1"></b-col>
             <b-col cols="10">
-              <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p class="text-center text-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </b-col>
             <b-col cols="1"></b-col>
           </b-row>
           <b-row class="category_overview my-5">
             <b-col class="d-flex flex-column align-items-center justify-content-center">
-              <img src="@/assets/images/dog.png" class="mb-2">
-              <p>Dogs</p>
+              <router-link to="dogarticles" class="d-flex flex-column align-items-center">
+                <img src="@/assets/images/dog.png" class="mb-2">
+                <p>Dogs</p>
+              </router-link>
             </b-col>
             <b-col class="d-flex flex-column align-items-center justify-content-center">
-              <img src="@/assets/images/cat.png" class="mb-2">
-              <p>Cats</p>
+              <router-link to="catarticles" class="d-flex flex-column align-items-center">
+                <img src="@/assets/images/cat.png" class="mb-2">
+                <p>Cats</p>
+              </router-link>
             </b-col>
             <b-col class="d-flex flex-column align-items-center justify-content-center">
-              <img src="@/assets/images/fish.png" class="mb-2">
-              <p>Fish</p>
+              <router-link to="fisharticles" class="d-flex flex-column align-items-center">
+                <img src="@/assets/images/fish.png" class="mb-2">
+                <p>Fish</p>
+              </router-link>
             </b-col>
             <b-col class="d-flex flex-column align-items-center justify-content-center">
-              <img src="@/assets/images/bird.png" class="mb-2">
-              <p>Birds</p>
+              <router-link to="birdarticles" class="d-flex flex-column align-items-center">
+                <img src="@/assets/images/bird.png" class="mb-2">
+                <p>Birds</p>
+              </router-link>
             </b-col>
             <b-col class="d-flex flex-column align-items-center justify-content-center">
-              <img src="@/assets/images/hamster.png" class="mb-2">
-              <p>Small<br>animals</p>
+              <router-link to="smallarticles" class="d-flex flex-column align-items-center">
+                <img src="@/assets/images/hamster.png" class="mb-2">
+                <p>Small<br>animals</p>
+              </router-link>
             </b-col>
             <b-col class="d-flex flex-column align-items-center justify-content-center">
               <img src="@/assets/images/+.png" class="mb-2">
@@ -52,10 +74,10 @@
               <div class="itemthumbnail">
                 <div class="itemthumbnail-image">
                   <img src="@/assets/images/cooling_mat_small.png" alt="">
-                  <div class="itemthumbnail-overlay">
+                  <router-link to="coolingmat" class="itemthumbnail-overlay">
                     <img src="@/assets/images/information.png" alt="">
                     <span>view details</span>
-                  </div>
+                  </router-link>
                 </div>
                 <div class="itemthumbnail-details">
                   <span>Cooling mat</span>
@@ -67,10 +89,10 @@
               <div class="itemthumbnail">
                 <div class="itemthumbnail-image">
                   <img src="@/assets/images/cooling_mat_small.png" alt="">
-                  <div class="itemthumbnail-overlay">
+                  <router-link to="coolingmat" class="itemthumbnail-overlay">
                     <img src="@/assets/images/information.png" alt="">
                     <span>view details</span>
-                  </div>
+                  </router-link>
                 </div>
                 <div class="itemthumbnail-details">
                   <span>Cooling mat</span>
@@ -82,10 +104,10 @@
               <div class="itemthumbnail">
                 <div class="itemthumbnail-image">
                   <img src="@/assets/images/cooling_mat_small.png" alt="">
-                  <div class="itemthumbnail-overlay">
+                  <router-link to="coolingmat" class="itemthumbnail-overlay">
                     <img src="@/assets/images/information.png" alt="">
                     <span>view details</span>
-                  </div>
+                  </router-link>
                 </div>
                 <div class="itemthumbnail-details">
                   <span>Cooling mat</span>
@@ -97,10 +119,10 @@
               <div class="itemthumbnail">
                 <div class="itemthumbnail-image">
                   <img src="@/assets/images/cooling_mat_small.png" alt="">
-                  <div class="itemthumbnail-overlay">
+                  <router-link to="coolingmat" class="itemthumbnail-overlay">
                     <img src="@/assets/images/information.png" alt="">
                     <span>view details</span>
-                  </div>
+                  </router-link>
                 </div>
                 <div class="itemthumbnail-details">
                   <span>Cooling mat</span>

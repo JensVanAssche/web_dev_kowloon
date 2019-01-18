@@ -12,59 +12,30 @@
         </b-row>
         <b-row>
           <b-col cols="6">
-            
-
-
-
-
-
-
-
-
-
-
-                    <div class="card-carousel">
-                        <div class="card-img">
-                            <img :src="currentImage" alt="">
-                            <div class="actions">
-                                <span @click="prevImage" class="prev">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span @click="nextImage" class="next">
-                                    <i class="fas fa-chevron-right"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="thumbnails">
-                            <div 
-                                v-for="(image, index) in  images"
-                                :key="image.id"
-                                :class="['thumbnail-image', (activeImage == index) ? 'active' : '']"
-                                @click="activateImage(index)"
-                            >
-                                <img :src="image.thumb">
-                                <span>{{ image.text }}</span>
-                            </div>
-                        </div>
+            <div class="card-carousel">
+                <div class="card-img">
+                    <img :src="currentImage" alt="">
+                    <div class="actions">
+                        <span @click="prevImage" class="prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span @click="nextImage" class="next">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
+                <div class="thumbnails">
+                    <div 
+                        v-for="(image, index) in  images"
+                        :key="image.id"
+                        :class="['thumbnail-image', (activeImage == index) ? 'active' : '']"
+                        @click="activateImage(index)"
+                    >
+                        <img :src="image.thumb">
+                        <span>{{ image.text }}</span>
+                    </div>
+                </div>
+            </div>
           </b-col>
           <b-col cols="6" class="mb-4">
             <div class="tags mb-2">
@@ -109,15 +80,15 @@
                 <div class="carousel">
                     <img src="@/assets/images/carousel_prev.png" class="carousel_prev" alt="">
                     <img src="@/assets/images/carousel_next.png" class="carousel_next" alt="">
-                    <carousel :per-page="4" :paginationEnabled="false" :scrollPerPage="false" :navigate-to="activeSlide">
+                    <carousel :per-page="4" :paginationEnabled="false" :scrollPerPage="false" :navigate-to="activeSlide" >
                         <slide>
                             <div class="itemthumbnail">
                                 <div class="itemthumbnail-image">
                                     <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <div class="itemthumbnail-overlay">
+                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
                                         <img src="@/assets/images/information.png" alt="">
                                         <span>view details</span>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                         </slide>
@@ -125,10 +96,10 @@
                             <div class="itemthumbnail">
                                 <div class="itemthumbnail-image">
                                     <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <div class="itemthumbnail-overlay">
+                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
                                         <img src="@/assets/images/information.png" alt="">
                                         <span>view details</span>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                         </slide>
@@ -136,10 +107,10 @@
                             <div class="itemthumbnail">
                                 <div class="itemthumbnail-image">
                                     <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <div class="itemthumbnail-overlay">
+                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
                                         <img src="@/assets/images/information.png" alt="">
                                         <span>view details</span>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                         </slide>
@@ -147,10 +118,10 @@
                             <div class="itemthumbnail">
                                 <div class="itemthumbnail-image">
                                     <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <div class="itemthumbnail-overlay">
+                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
                                         <img src="@/assets/images/information.png" alt="">
                                         <span>view details</span>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                         </slide>
@@ -158,10 +129,10 @@
                             <div class="itemthumbnail">
                                 <div class="itemthumbnail-image">
                                     <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <div class="itemthumbnail-overlay">
+                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
                                         <img src="@/assets/images/information.png" alt="">
                                         <span>view details</span>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                         </slide>
@@ -169,10 +140,10 @@
                             <div class="itemthumbnail">
                                 <div class="itemthumbnail-image">
                                     <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <div class="itemthumbnail-overlay">
+                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
                                         <img src="@/assets/images/information.png" alt="">
                                         <span>view details</span>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                         </slide>
@@ -180,10 +151,10 @@
                             <div class="itemthumbnail">
                                 <div class="itemthumbnail-image">
                                     <img src="@/assets/images/cooling_mat_small.png" alt="">
-                                    <div class="itemthumbnail-overlay">
+                                    <router-link to="coolingmat" class="itemthumbnail-overlay">
                                         <img src="@/assets/images/information.png" alt="">
                                         <span>view details</span>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
                         </slide>
