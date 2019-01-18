@@ -14,6 +14,10 @@ input[type="text"] {
     &::placeholder {
         color: $c600;
     }
+
+    &.inputerror {
+        border: 3px red solid;
+    }
 }
 
 textarea {
@@ -24,4 +28,13 @@ textarea {
     &::placeholder {
         color: $c600;
     }
+
+    &.inputerror {
+        border: 3px red solid;
+    }
+}
+
+.errormessage {
+    color: red;
+    font-size: 1em;
 }

@@ -57,6 +57,11 @@
             <h1 class="title">COOLING MAT</h1>
             <h3 class="title mb-4">€ 15,49</h3>
             <h4 class="title">Colors</h4>
+            <div class="category-dots mb-4">
+                <div class="category-dots-white"></div>
+                <div class="category-dots-black"></div>
+                <div class="category-dots-blue"></div>
+            </div>
             <h4 class="title">Description</h4>
             <p class="mb-4">
                 Hier komt een de volledige beschrijvende tekst met een max. aantal karakters. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea clit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat consectetur.
@@ -93,25 +98,25 @@
                     <img src="@/assets/images/carousel_next.png" class="carousel_next" alt="">
                     <carousel :per-page="4" :paginationEnabled="false" :scrollPerPage="false" :navigate-to="activeSlide" >
                         <slide>
-                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
+                            <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
+                            <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
+                            <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
+                            <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
+                            <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
+                            <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
                         </slide>
                         <slide>
-                            <ItemThumbnailSmall :details="false"></ItemThumbnailSmall>
+                            <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
                         </slide>
                     </carousel>
                 </div>

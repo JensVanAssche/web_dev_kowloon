@@ -1,11 +1,16 @@
 <template>
   <div class="bigitemthumbnail">
     <div class="itemthumbnail-image">
-    <img src="@/assets/images/cooling_mat_big.png" alt="">
-    <router-link to="coolingmat" class="itemthumbnail-overlay">
-        <img src="@/assets/images/information.png" alt="">
-        <span>view details</span>
-    </router-link>
+        <img src="@/assets/images/cooling_mat_big.png" alt="">
+        <div class="category-dots">
+            <div class="category-dots-white"></div>
+            <div class="category-dots-black"></div>
+            <div class="category-dots-blue"></div>
+        </div>
+        <router-link to="coolingmat" class="itemthumbnail-overlay">
+            <img src="@/assets/images/information.png" alt="">
+            <span>view details</span>
+        </router-link>
     </div>
     <div class="itemthumbnail-details">
         <h1>Cooling mat</h1>

@@ -6,7 +6,7 @@ input[type="button"].greybutton {
     cursor: pointer;
 }
 
-input[type="button"].pinkbutton {
+input[type="button"].pinkbutton, input[type="submit"].pinkbutton {
     background-color: $pink;
     font-weight: bold;
     color: $white;

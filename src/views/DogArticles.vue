@@ -92,13 +92,13 @@
               <b-col cols="6">
                   <b-row no-gutters>
                       <b-col cols="6">
-                        <ItemThumbnailSmall :details="true"></ItemThumbnailSmall>
+                        <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
                       <b-col cols="6">
-                        <ItemThumbnailSmall :details="true"></ItemThumbnailSmall>
+                        <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
                       <b-col cols="6">
-                        <ItemThumbnailSmall :details="true"></ItemThumbnailSmall>
+                        <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
                       <b-col cols="6">
                         <ItemThumbnailMultiple></ItemThumbnailMultiple>

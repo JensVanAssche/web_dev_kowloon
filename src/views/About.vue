@@ -33,12 +33,25 @@
               </div>
               <div class="mb-5">
                 <h2 class="title mb-3">LEAVE US A MESSAGE</h2>
-                <form>
+                <form action="about" @submit="checkForm">
                   <label for="email">E-mail</label><br>
-                  <input type="text" id="email" class="mb-4" placeholder="name@domain.com"><br>
+                  <div v-if="emailError != null">
+                    <span class="errormessage">{{ emailError }}</span><br>
+                    <input type="text" name="email" v-model="email" id="email" class="mb-4 inputerror" placeholder="name@domain.com">
+                  </div>
+                  <div v-else>
+                    <input type="text" name="email" v-model="email" id="email" class="mb-4" placeholder="name@domain.com">
+                  </div>
+                  <br>
                   <label for="textarea">Your message</label><br>
-                  <textarea name="message" id="textarea" class="mb-4" rows="6" placeholder="Write your message here."></textarea>
-                  <input type="button" class="pinkbutton" value="Send">
+                  <div v-if="messageError != null">
+                    <span class="errormessage">{{ messageError }}</span><br>
+                    <textarea name="message" id="textarea" v-model="message" class="mb-4 inputerror" rows="6" placeholder="Write your message here."></textarea>
+                  </div>
+                  <div v-else>
+                    <textarea name="message" id="textarea" v-model="message" class="mb-4" rows="6" placeholder="Write your message here."></textarea>
+                  </div>
+                  <input type="submit" class="pinkbutton" value="Send">
                 </form>
               </div>
               <div>
@@ -76,6 +89,40 @@ export default {
     Search,
     FAQ,
     FAQquestions
+  },
+  data () {
+    return {
+      email: null,
+      message: null,
+      emailError: null,
+      messageError: null
+    }
+  },
+  methods:{
+    checkForm: function (e) {   
+      if (!this.email) {
+        this.emailError = "email required";
+      }
+      else if (this.email.includes("@") && this.email.includes(".")) {
+        this.validEmail = true;
+        this.emailError = null;
+      }
+      else {
+        this.emailError = "invalid email";
+      }
+      if (!this.message) {
+        this.messageError = "message required";
+      }
+      else {
+        this.messageError = null;
+      }
+
+      if (this.emailError == null && this.messageError == null) {
+          return true;
+      }
+
+      e.preventDefault();
+    }
   }
 }
 </script>
