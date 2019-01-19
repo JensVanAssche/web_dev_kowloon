@@ -65,5 +65,15 @@
 
 // xs: smaller than 576px
 @media only screen and (max-width: 576px) {
-
+    .article_filter {  
+        .article_filter_content {
+            max-height: 300px;
+            .checkbox_container {
+                display: inline-block;
+                width: 50%;
+                padding-top: 0;
+                margin-right: 0;
+            }
+        }
+    }
 }

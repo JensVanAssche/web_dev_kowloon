@@ -34,10 +34,10 @@
                   <img src="@/assets/images/dropdown.png" alt="">
               </b-col>
               <b-col cols="12" class="article_filter_content closed">
-                  <div class="ml-5">
+                  <div class="ml-0 ml-sm-5">
                       <h4 class="title">By collection</h4>
                       <div class="mb-4">
-                          <label class="checkbox_container">Splash 'n Fun
+                        <label class="checkbox_container">Splash 'n Fun
                             <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
