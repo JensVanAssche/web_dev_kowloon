@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Cookies></Cookies> -->
+    <Cookies></Cookies>
     <Search></Search>
     <FAQ></FAQ>
     <Navigation></Navigation>

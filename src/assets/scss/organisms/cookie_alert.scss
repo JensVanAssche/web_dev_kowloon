@@ -3,8 +3,9 @@
     width: 100vw;
     padding: 40px 80px;
     color: $c300;
+    z-index: 6;
 
-    .container {
+    .col {
         display: flex;
     }
 
@@ -27,5 +28,37 @@
         font-weight: bold;
         font-size: 1.4em;
         cursor: pointer;
+    }
+}
+
+
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+    .cookie_alert {
+        padding: 20px 20px 40px 80px;
+        img {
+            display: none;
+        }
+        span.orange_button {
+            width: 100%;
+        }
+    }
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+    .cookie_alert {
+        padding: 20px 0px;
     }
 }
