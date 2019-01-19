@@ -61,17 +61,17 @@
                       <h4 class="title">Price range</h4>
                       <div class="mb-5">
                           <b-row>
-                            <b-col class="mt-2">
+                            <b-col cols="12" md="6" class="my-3">
                                 <vueSlider v-model="slidervalue" v-bind="options"></vueSlider>  
                             </b-col>
-                            <b-col class="d-flex align-items-center">
+                            <b-col cols="12" md="6" class="d-flex align-items-center">
                                 <div class="priceinput mr-4">
-                                    <input type="text" v-model="slidervalue[0]" class="px-5">
+                                    <input type="text" v-model="slidervalue[0]">
                                     <span>€</span>
                                 </div>
                                 -
                                 <div class="priceinput ml-4">
-                                    <input type="text" v-model="slidervalue[1]" class="px-5">
+                                    <input type="text" v-model="slidervalue[1]">
                                     <span>€</span>
                                 </div>
                             </b-col>
@@ -89,23 +89,29 @@
               </b-col>
           </b-row>
           <b-row no-gutters>
-              <b-col cols="6">
+              <b-col cols="12" md="6">
                   <b-row no-gutters>
-                      <b-col cols="6">
+                      <b-col cols="4" md="6">
                         <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
-                      <b-col cols="6">
+                      <b-col cols="4" md="6">
                         <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
-                      <b-col cols="6">
+                      <b-col cols="4" md="6" class="d-md-none">
+                        <ItemThumbnailMultiple></ItemThumbnailMultiple>
+                      </b-col>
+                      <b-col cols="4" md="6">
                         <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
-                      <b-col cols="6">
+                      <b-col cols="4" md="6" class="d-md-none">
+                        <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
+                      </b-col>
+                      <b-col cols="4" md="6">
                         <ItemThumbnailMultiple></ItemThumbnailMultiple>
                       </b-col>
                   </b-row>
               </b-col>
-              <b-col cols="6">
+              <b-col cols="6" class="d-none d-md-block">
                   <b-row>
                       <b-col cols="12">
                         <ItemThumbnailBig></ItemThumbnailBig>

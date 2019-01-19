@@ -28,7 +28,8 @@
         .priceinput {
             position: relative;
             input {
-                width: 150px;
+                width: 100%;
+                padding-left: 50px;
             }
 
             span {
@@ -39,4 +40,30 @@
             }
         }
     }
+}
+
+
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+    .article_filter {   
+        .article_filter_content {
+            max-height: 250px;
+        }
+    }
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+
 }

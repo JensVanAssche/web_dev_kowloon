@@ -56,16 +56,16 @@
               <h1 class="title">HOT ITEMS.</h1>
             </b-col>
             <b-col cols="3" md="4" lg="3">
-              <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
+              <ItemThumbnailSmall :details="true" :dots="true" class="hide-details-mobile"></ItemThumbnailSmall>
             </b-col>
             <b-col cols="3" md="4" lg="3">
-              <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
+              <ItemThumbnailSmall :details="true" :dots="true" class="hide-details-mobile"></ItemThumbnailSmall>
             </b-col>
             <b-col cols="3" class="d-md-none d-lg-block">
-              <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
+              <ItemThumbnailSmall :details="true" :dots="true" class="hide-details-mobile"></ItemThumbnailSmall>
             </b-col>
             <b-col cols="3" md="4" lg="3">
-              <ItemThumbnailMultiple></ItemThumbnailMultiple>
+              <ItemThumbnailMultiple class="hide-details-mobile"></ItemThumbnailMultiple>
             </b-col>
           </b-row>
           <b-row>

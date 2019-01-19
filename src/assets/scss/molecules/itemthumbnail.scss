@@ -85,12 +85,16 @@
                 }
             }
         }
+        .itemthumbnail-details {
+            font-size: 0.8em;
+            padding: 5px 0px 0px 0px;
+        }
     }
 }
 
 // sm: 576px to 768px
 @media only screen and (max-width: 768px) {
-    .itemthumbnail { 
+    .itemthumbnail.hide-details-mobile { 
         margin: 0 0 10px 0;
         .itemthumbnail-image {
             .itemthumbnail-overlay {
