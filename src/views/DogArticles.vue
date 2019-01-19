@@ -82,7 +82,7 @@
           </b-row>
           <b-row>
               <b-col cols="12" class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
-                  <SelectBox></SelectBox>
+                  <SelectDropdown></SelectDropdown>
                   <div class="my-2">
                     <span><span class="text-grey">Dog items: </span><span class="font-weight-bold">5 of 56</span></span>
                   </div>
@@ -134,7 +134,7 @@ import HeaderCarousel from '@/components/HeaderCarousel.vue';
 import ItemThumbnailSmall from '@/components/ItemThumbnailSmall.vue';
 import ItemThumbnailMultiple from '@/components/ItemThumbnailMultiple.vue';
 import ItemThumbnailBig from '@/components/ItemThumbnailBig.vue';
-import SelectBox from '@/components/SelectBox.vue';
+import SelectDropdown from '@/components/SelectDropdown.vue';
 
 export default {
   name: 'dogarticles',
@@ -147,7 +147,7 @@ export default {
     ItemThumbnailSmall,
     ItemThumbnailMultiple,
     ItemThumbnailBig,
-    SelectBox
+    SelectDropdown
   },
   data () {
     return {

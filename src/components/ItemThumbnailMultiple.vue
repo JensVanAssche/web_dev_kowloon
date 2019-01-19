@@ -14,7 +14,7 @@
     </div>
     <div class="multiple-1"></div>
     <div class="multiple-2"></div>
-    </div>
+  </div>
 </template>
 
 <script>

@@ -1,11 +1,11 @@
 <template>
     <ul class="select-dropdown">
-      <li @click="toggleMenu()" class="select-selected">
+      <li @click="toggleDropdown()" class="select-selected">
         {{ value.name !== undefined ? value.name : placeholder }}
       </li>
 
       <div v-if="showMenu" class="select-options">
-        <li v-for="option in options" :key="option.id" @click="updateValue(option)" :class="{'bg-grey-75': option.id === value.id}">
+        <li v-for="option in options" :key="option.id" @click="updateValue(option)">
             {{ option.name }}
         </li>
       </div>
@@ -33,7 +33,7 @@
         this.showMenu = false;
         this.value = option;
       },
-      toggleMenu() {
+      toggleDropdown() {
         this.showMenu = !this.showMenu;
       }
     }
