@@ -11,7 +11,7 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col cols="6">
+          <b-col cols="12" md="6">
             <div class="card-carousel">
                 <div class="card-img">
                     <img :src="currentImage" alt="">
@@ -37,7 +37,7 @@
                 </div>
             </div>
           </b-col>
-          <b-col cols="6" class="mb-4">
+          <b-col cols="12" md="6" class="mb-4">
             <div class="tags mb-2">
                 <h1>K</h1>
                 <div class="tag">
@@ -54,13 +54,19 @@
                     </div>
                 </div>
             </div>
-            <h1 class="title">COOLING MAT</h1>
-            <h3 class="title mb-4">€ 15,49</h3>
-            <h4 class="title">Colors</h4>
-            <div class="category-dots mb-4">
-                <div class="category-dots-white"></div>
-                <div class="category-dots-black"></div>
-                <div class="category-dots-blue"></div>
+            <div class="d-flex flex-row flex-md-column justify-content-between">
+                <div>
+                    <h1 class="title">COOLING MAT</h1>
+                    <h3 class="title mb-4">€ 15,49</h3>
+                </div>
+                <div class="d-flex flex-column align-items-end align-items-md-start">
+                    <h4 class="title">Colors</h4>
+                    <div class="category-dots mb-4">
+                        <div class="category-dots-white"></div>
+                        <div class="category-dots-black"></div>
+                        <div class="category-dots-blue"></div>
+                    </div>
+                </div>                
             </div>
             <h4 class="title">Description</h4>
             <p class="mb-4">
