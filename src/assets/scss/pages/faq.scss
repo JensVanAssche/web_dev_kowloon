@@ -7,8 +7,11 @@
     background-color: $c800;
     z-index: 10;
     color: $black;
-    padding-top: 200px;
 
+    .title {
+        padding-top: 200px;
+    }
+    
     &.closed {
         visibility: hidden;
     }
@@ -76,5 +79,36 @@
             }
            
         }
+    }
+
+    .close_faq {
+        cursor: pointer;
+        color: $c600;
+        font-size: 2em;
+    }
+}
+
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+    .faq .title {
+        padding-top: 0;
+    }
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+    .faq {
+        left: 0px;
     }
 }

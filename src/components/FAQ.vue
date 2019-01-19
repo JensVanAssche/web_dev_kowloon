@@ -2,6 +2,11 @@
   <div class="faq closed">
       <b-container>
           <b-row>
+              <b-col class="d-flex justify-content-end">
+                  <div class="close_faq">X</div>
+              </b-col>
+          </b-row>
+          <b-row>
               <b-col>
                   <h1 class="title">FREQUENTLY ASKED QUESTIONS</h1>
               </b-col>
@@ -22,7 +27,7 @@
                 You can always contact our customer service. We’re happy to help you!</span>
               </b-col>
           </b-row>
-          <b-row class="faq_questions">
+          <b-row class="faq_questions mx-1">
               <b-col cols="12">
                   <h2>Dit is een vraag</h2>
                   <div>
@@ -79,6 +84,7 @@ export default {
     },
     mounted: function() {
         document.querySelector("nav .nav_faq").addEventListener('click', this.searchOnClick);
+        document.querySelector(".faq .close_faq").addEventListener('click', this.searchOnClick);
     }
 }
 </script>
