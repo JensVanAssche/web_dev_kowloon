@@ -16,13 +16,22 @@
     </carousel>
     <div class="carousel-progession">
         <div class="carousel-progession-bar"></div>
-        <div class="carousel-progession-progress"></div>
+        <div class="carousel-progession-progress active"></div>
     </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'headercarousel'
+    name: 'headercarousel',
+    methods: {
+        carouselClick: function () {
+            document.querySelector(".carousel-progession-progress").classList.remove("active");
+            setTimeout(function(){ document.querySelector(".carousel-progession-progress").classList.add("active"); }, 1);
+        }
+    },
+    mounted: function() {
+        document.querySelector(".VueCarousel-pagination").addEventListener('click', this.carouselClick);
+    }
 }
 </script>
