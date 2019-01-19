@@ -39,7 +39,7 @@
     
         .advancedfilter_content {
             .advancedfilter_content_category {
-                margin-left: 40px;
+                padding-left: 40px;
             }
 
             .advancedfilter_content_slider {
@@ -57,9 +57,6 @@
                     }
                 }
             }
-
-
-            
         }
 
         &.closed {
@@ -75,6 +72,7 @@
     .search_searchfield {
         border-bottom: 1px solid $black;
         padding-bottom: 10px;
+        margin: 0 1px;
 
         img {
             width: 30px;
@@ -85,6 +83,83 @@
             font-size: 2em;
             font-weight: bold;
         }
+
+        .search_searchfield_mobile { display: none !important; }
     }
+
+    .close_search {
+        cursor: pointer;
+        color: $c600;
+        font-size: 2em;
+    }
+}
+
+
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+    .search {
+        .advancedfilter {
+            max-height: 280px;
+            .advancedfilter_content {
+                .advancedfilter_content_category {
+                    padding-left: 40px;
+                    margin-bottom: 40px;
+                }
     
+                .advancedfilter_content_slider {
+                    padding-left: 40px;
+                    padding-right: 160px;
+                }
+            }
+        }
+    }
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+    .search {
+        left: 0px;
+        .advancedfilter {
+            max-height: 350px;
+            .advancedfilter_content {
+                .advancedfilter_content_category {
+                    padding-left: 20px;
+
+                    .checkbox_container {
+                        display: inline-block;
+                        width: 50%;
+                        margin-right: 0;
+                        padding-top: 0;
+                    }
+                }
+
+                .advancedfilter_content_slider {
+                    padding-left: 20px;
+                    padding-right: 20px;
+
+                    .priceinput {
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search_searchfield {
+            .search_searchfield_desktop { display: none !important; }
+            .search_searchfield_mobile { display: block !important; }
+        }
+    }
 }

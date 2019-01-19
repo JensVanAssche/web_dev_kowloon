@@ -1,6 +1,11 @@
 <template>
   <div class="search closed">
       <b-container>
+          <b-row>
+              <b-col class="d-flex justify-content-end">
+                  <div class="close_search">X</div>
+              </b-col>
+          </b-row>
           <b-row class="advancedfilter closed">
               <b-col class="advancedfilter_header" cols="12">
                 <h1>Advanced filter</h1>
@@ -8,7 +13,7 @@
               </b-col>
               <b-col class="advancedfilter_content" cols="12">
                   <b-row>
-                      <b-col class="advancedfilter_content_category">
+                      <b-col cols="12" lg="6" class="advancedfilter_content_category">
                           <div>
                               <h4 class="title">Category</h4>
                           </div>
@@ -35,7 +40,7 @@
                               </label>
                           </div>
                       </b-col>
-                      <b-col class="advancedfilter_content_slider">
+                      <b-col cols="12" lg="6" class="advancedfilter_content_slider">
                           <div>
                               <h4 class="title">Price range</h4>
                           </div>
@@ -60,11 +65,15 @@
               </b-col>
           </b-row>
           <b-row class="search_searchfield">
-              <div class="d-flex align-items-center">
+              <div class="search_searchfield_desktop d-flex align-items-center">
                   <img src="@/assets/images/search_icon_fat.png" alt="">
                   <span>Just start typing and hit</span>
                   <img src="@/assets/images/break.png" alt="">
                   <span>to search</span>
+              </div>
+              <div class="search_searchfield_mobile d-flex align-items-center">
+                  <img src="@/assets/images/search_icon_fat.png" alt="">
+                  <span>Type to search</span>
               </div>
           </b-row>
       </b-container>
@@ -115,6 +124,7 @@ export default {
     },
     mounted: function() {
         document.querySelector("nav .nav_search").addEventListener('click', this.searchOnClick);
+        document.querySelector(".search .close_search").addEventListener('click', this.searchOnClick);
         document.querySelector(".advancedfilter_header").addEventListener('click', this.filterOnClick);
     }
 }
