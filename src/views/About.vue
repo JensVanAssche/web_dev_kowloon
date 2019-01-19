@@ -25,12 +25,26 @@
             </b-col>
           </b-row>
           <b-row>
-            <b-col cols="8">
+            <b-col cols="12" sm="8">
               <div class="mb-5">
                 <h2 class="title">KOWLOON</h2>
                 <p>Pet Concept, active since 1998, is developing, importing and exporting products for pets worldwide.<br><br>
                 natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae sequi nesciunt.</p>
               </div>
+            </b-col>
+            <b-col cols="12" sm="4" class="mb-5">
+              <div class="contact">
+                <h2 class="title">CONTACT</h2>
+                <ul>
+                  <li>Deckx Johan</li>
+                  <li>Bosdreef 7</li>
+                  <li>2200 Herentals</li>
+                </ul>
+              </div>
+            </b-col>
+          </b-row>
+          <b-row>
+            <b-col>
               <div class="mb-5">
                 <h2 class="title mb-3">LEAVE US A MESSAGE</h2>
                 <form action="about" @submit="checkForm">
@@ -57,16 +71,9 @@
               <div>
                   <h2 class="title">FREQUENTLY ASKED QUESTIONS</h2>
                   <FAQquestions></FAQquestions>
-              </div>
-            </b-col>
-            <b-col cols="4">
-              <div class="contact">
-                <h2 class="title">CONTACT</h2>
-                <ul>
-                  <li>Deckx Johan</li>
-                  <li>Bosdreef 7</li>
-                  <li>2200 Herentals</li>
-                </ul>
+                  <div class="d-flex justify-content-center justify-content-sm-end mb-2">
+                    <router-link to="about" class="emphasis">More questions?</router-link>
+                  </div>
               </div>
             </b-col>
           </b-row>

@@ -16,3 +16,27 @@ input[type="button"].pinkbutton, input[type="submit"].pinkbutton {
     cursor: pointer;
     font-size: 1.1em;
 }
+
+
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+    input[type="submit"].pinkbutton {
+        width: 100%;
+    }
+}
