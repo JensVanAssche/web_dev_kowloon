@@ -136,13 +136,7 @@
 
 // sm: 576px to 768px
 @media only screen and (max-width: 768px) {
-    .itemthumbnail-multiple.hide-details-mobile { 
-        margin: 0 0 10px 0;
-        .itemthumbnail-image {
-            .category-dots {
-                display: none;
-            }
-        }
+    .itemthumbnail-multiple {
         .itemthumbnail-overlay {
             img {
                 width: 40px;
@@ -154,6 +148,15 @@
                 display: none;
             }
         }
+    }
+
+    .itemthumbnail-multiple.hide-details-mobile {
+        margin: 0 0 10px 0;
+        .itemthumbnail-image {
+            .category-dots {
+                display: none;
+            }
+        }
         .itemthumbnail-details {
             display: none;
         }
@@ -162,5 +165,10 @@
 
 // xs: smaller than 576px
 @media only screen and (max-width: 576px) {
-
+    .itemthumbnail-multiple { 
+        .itemthumbnail-details {
+            font-size: 1em;
+            padding: 5px 10px 0 10px;
+        }
+    }
 }

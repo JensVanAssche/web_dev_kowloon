@@ -94,8 +94,7 @@
 
 // sm: 576px to 768px
 @media only screen and (max-width: 768px) {
-    .itemthumbnail.hide-details-mobile { 
-        margin: 0 0 10px 0;
+    .itemthumbnail { 
         .itemthumbnail-image {
             .itemthumbnail-overlay {
                 img {
@@ -108,7 +107,12 @@
                     display: none;
                 }
             }
+        }
+    }
 
+    .itemthumbnail.hide-details-mobile {
+        margin: 0 0 10px 0;
+        .itemthumbnail-image {
             .category-dots {
                 display: none;
             }
@@ -121,5 +125,10 @@
 
 // xs: smaller than 576px
 @media only screen and (max-width: 576px) {
-
+    .itemthumbnail { 
+        .itemthumbnail-details {
+            font-size: 1em;
+            padding: 5px 10px 0 10px;
+        }
+    }
 }
