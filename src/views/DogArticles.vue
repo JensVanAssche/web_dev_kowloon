@@ -81,9 +81,9 @@
               </b-col>
           </b-row>
           <b-row>
-              <b-col cols="12" class="d-flex justify-content-between align-items-center">
+              <b-col cols="12" class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
                   <SelectBox></SelectBox>
-                  <div>
+                  <div class="my-2">
                     <span><span class="text-grey">Dog items: </span><span class="font-weight-bold">5 of 56</span></span>
                   </div>
               </b-col>
@@ -91,22 +91,22 @@
           <b-row no-gutters>
               <b-col cols="12" md="6">
                   <b-row no-gutters>
-                      <b-col cols="4" md="6">
+                      <b-col cols="12" sm="6" md="6">
                         <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
-                      <b-col cols="4" md="6">
+                      <b-col cols="12" sm="6" md="6">
                         <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
-                      <b-col cols="4" md="6" class="d-md-none">
+                      <b-col cols="12" sm="6" md="6" class="d-md-none">
                         <ItemThumbnailMultiple></ItemThumbnailMultiple>
                       </b-col>
-                      <b-col cols="4" md="6">
+                      <b-col cols="12" sm="6" md="6">
                         <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
-                      <b-col cols="4" md="6" class="d-md-none">
+                      <b-col cols="12" sm="6" md="6" class="d-md-none">
                         <ItemThumbnailSmall :details="true" :dots="true"></ItemThumbnailSmall>
                       </b-col>
-                      <b-col cols="4" md="6">
+                      <b-col cols="12" sm="6" md="6">
                         <ItemThumbnailMultiple></ItemThumbnailMultiple>
                       </b-col>
                   </b-row>

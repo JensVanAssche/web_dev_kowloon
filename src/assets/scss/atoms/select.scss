@@ -32,3 +32,31 @@
         }
     }
 }
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+    .select-dropdown {
+        width: 100%;
+        .select-selected {
+            width: 100%;
+        }
+        .select-options {
+            width: 100%;
+        }
+    }
+}
