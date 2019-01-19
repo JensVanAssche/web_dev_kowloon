@@ -16,7 +16,7 @@
         <span>Cooling mat</span>
         <span>€ 15,49</span>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>

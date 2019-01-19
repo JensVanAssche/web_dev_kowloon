@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Cookies></Cookies> -->
+    <Cookies v-if="cookie != 1"></Cookies>
     <Search></Search>
     <FAQ></FAQ>
     <Navigation></Navigation>
@@ -92,6 +92,11 @@ import ItemThumbnailMultiple from '@/components/ItemThumbnailMultiple.vue';
 
 export default {
   name: 'home',
+  data: function() {
+    return {
+      cookie: null
+    }
+  },
   components: {
     Navigation,
     Cookies,
@@ -101,6 +106,10 @@ export default {
     HeaderCarousel,
     ItemThumbnailSmall,
     ItemThumbnailMultiple
+  },
+  mounted: function() {
+    this.cookie = localStorage.getItem('cookie');
+    console.log(this.cookie);
   }
 }
 </script>
