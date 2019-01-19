@@ -61,3 +61,61 @@
         }
     }
 }
+
+
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+    .itemthumbnail { 
+        .itemthumbnail-image { 
+            .itemthumbnail-overlay {
+                img {
+                    width: 60px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+        
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+    .itemthumbnail { 
+        margin: 0 0 10px 0;
+        .itemthumbnail-image {
+            .itemthumbnail-overlay {
+                img {
+                    width: 40px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+        
+                span {
+                    display: none;
+                }
+            }
+
+            .category-dots {
+                display: none;
+            }
+        }
+        .itemthumbnail-details {
+            display: none;
+        }
+    }
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+
+}

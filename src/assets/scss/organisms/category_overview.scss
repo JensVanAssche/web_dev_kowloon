@@ -1,6 +1,7 @@
 .category_overview {
-    .col {
+    > div {
         border-right: 1px solid $c600;
+        margin-bottom: 30px;
 
         &:last-child {
             border-right: none;

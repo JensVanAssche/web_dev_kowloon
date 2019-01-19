@@ -1,19 +1,19 @@
 <template>
   <b-row class="newsletter">
-      <b-col cols="7">
-            <h1 class="mb-4 text-center">discover amazing<br />
-            Kowloon deals!
-            </h1>
-            <h4>only in our newsletter</h4>
-        </b-col>
-        <b-col cols="5">
-            <h2>Subscribe to our newsletter</h2>
-            <p>Lorum ipsum dolor sit amet.</p>
-            <form>
-            <input type="text" class="button" placeholder="name@domain.com" v-model="email">
-            <input type="button" value="OK" class="greybutton" @click="saveEmail">
-            </form>
-        </b-col>
+      <b-col cols="12" md="7">
+        <h1 class="mb-4 text-center">discover amazing<br />
+        Kowloon deals!
+        </h1>
+        <h4>only in our newsletter</h4>
+      </b-col>
+      <b-col cols="12" md="5">
+        <h2>Subscribe to our newsletter</h2>
+        <p>Lorum ipsum dolor sit amet.</p>
+        <form>
+        <input type="text" class="button" placeholder="name@domain.com" v-model="email">
+        <input type="button" value="OK" class="greybutton" @click="saveEmail">
+        </form>
+      </b-col>
   </b-row>
 </template>
 

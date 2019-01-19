@@ -1,15 +1,11 @@
 .cookie_alert {
-    position: fixed;
-    z-index: 2;
     background-color: $cream;
     width: 100vw;
-    padding: 40px;
+    padding: 40px 80px;
     color: $c300;
-    box-shadow: 0 5px 30px;
 
     .container {
         display: flex;
-        
     }
 
     img {
@@ -31,9 +27,5 @@
         font-weight: bold;
         font-size: 1.4em;
         cursor: pointer;
-    }
-
-    &.closed {
-        visibility: hidden;
     }
 }

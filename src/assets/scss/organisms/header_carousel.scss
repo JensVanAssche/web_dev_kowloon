@@ -5,6 +5,7 @@
 		.VueCarousel-slide {
 			transform: translateY(-180px);
 			position: relative;
+			overflow: hidden;
 
 			img:first-child {
 				position: absolute;
@@ -66,4 +67,76 @@
 @keyframes progression {
 	from { width: 0%; }
 	to { width: 100%; }
+}
+
+
+
+// lg: 992px to 1200px
+@media only screen and (max-width: 1200px) {
+	.header {
+		.VueCarousel {
+			height: 500px;
+	
+			.VueCarousel-slide {
+				transform: translateY(-90px);
+
+				img:first-child {
+					top: 120px;
+				}
+			}
+		}
+	}
+}
+
+// md: 768px to 992px
+@media only screen and (max-width: 992px) {
+	.header {
+		.VueCarousel {
+			height: 400px;
+	
+			.VueCarousel-slide {
+				transform: translateY(-90px);
+			}
+		}
+	}
+}
+
+// sm: 576px to 768px
+@media only screen and (max-width: 768px) {
+	.header {
+		.VueCarousel {
+			height: 400px;
+	
+			.VueCarousel-slide {
+				transform: translateY(0px);
+
+				img:last-child {
+					transform: scale(1.5);
+				}
+			}
+
+			.VueCarousel-pagination {
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+// xs: smaller than 576px
+@media only screen and (max-width: 576px) {
+	.header {
+		.VueCarousel {
+			height: 300px;
+	
+			.VueCarousel-slide {
+				img:first-child {
+					top: 90px;
+				}
+
+				img:last-child {
+					transform: scale(2);
+				}
+			}
+		}
+	}
 }
