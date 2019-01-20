@@ -3,7 +3,7 @@
       <b-container>
           <b-row>
               <b-col class="d-flex justify-content-end">
-                  <div class="close_faq">X</div>
+                  <div class="close_faq" @click="closeFAQ">X</div>
               </b-col>
           </b-row>
           <b-row>
@@ -74,17 +74,10 @@
 export default {
     name: 'search',
     methods: {
-        searchOnClick: function () {
+        closeFAQ: function () {
             document.querySelector(".faq").classList.toggle("closed");
             document.querySelector(".nav_faq").classList.toggle("active");
-
-            document.querySelector(".search").classList.add("closed");
-            document.querySelector(".nav_search").classList.remove("active");
         }
-    },
-    mounted: function() {
-        document.querySelector("nav .nav_faq").addEventListener('click', this.searchOnClick);
-        document.querySelector(".faq .close_faq").addEventListener('click', this.searchOnClick);
     }
 }
 </script>

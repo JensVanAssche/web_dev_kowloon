@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="nav_hamburger_mobile">
+    <div class="nav_hamburger_mobile" @click="navOnClick">
       <img src="@/assets/images/hamburger_icon.png">
     </div>
     <router-view/>
@@ -24,9 +24,6 @@ export default {
         this.kowloonLogo();
       }
     }
-  },
-  mounted: function() {
-    document.querySelector(".nav_hamburger_mobile").addEventListener('click', this.navOnClick);
   }
 }
 </script>

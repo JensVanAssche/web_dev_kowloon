@@ -1,14 +1,14 @@
 <template>
   <nav class="d-flex flex-column">
-      <div class="nav_hamburger">
+      <div class="nav_hamburger" @click="toggleNav">
         <img src="@/assets/images/hamburger_icon.png">
       </div>
       <div class="nav_util">
-        <div class="nav_search d-flex align-items-center">
+        <div class="nav_search d-flex align-items-center" @click="toggleSearch">
           <img src="@/assets/images/search_icon.png">
           <span class="ml-2">Search</span>
         </div>
-        <div class="nav_faq d-flex align-items-center">
+        <div class="nav_faq d-flex align-items-center" @click="toggleFAQ">
           <img src="@/assets/images/question_icon.png">
           <span class="ml-2">FAQ</span>
         </div>
@@ -61,7 +61,7 @@ export default {
       document.querySelector("nav .nav_kowloon span:first-child").classList.toggle("active");
       document.querySelector("nav .nav_kowloon span:last-child").classList.toggle("active");
     },
-    navOnClick: function () {
+    toggleNav: function () {
       document.querySelector("nav").classList.toggle("active");
 
       if (!document.querySelector("nav").classList.contains("active")) {
@@ -70,10 +70,21 @@ export default {
       else {
         this.kowloonLogo();
       }
+    },
+    toggleSearch: function () {
+      document.querySelector(".search").classList.toggle("closed");
+      document.querySelector(".nav_search").classList.toggle("active");
+
+      document.querySelector(".faq").classList.add("closed");
+      document.querySelector(".nav_faq").classList.remove("active");
+    },
+    toggleFAQ: function () {
+      document.querySelector(".faq").classList.toggle("closed");
+      document.querySelector(".nav_faq").classList.toggle("active");
+
+      document.querySelector(".search").classList.add("closed");
+      document.querySelector(".nav_search").classList.remove("active");
     }
-  },
-  mounted: function() {
-    document.querySelector("nav .nav_hamburger").addEventListener('click', this.navOnClick);
   }
 }
 </script>

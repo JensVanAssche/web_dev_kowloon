@@ -3,11 +3,11 @@
       <b-container>
           <b-row>
               <b-col class="d-flex justify-content-end">
-                  <div class="close_search">X</div>
+                  <div class="close_search" @click="closeSearch">X</div>
               </b-col>
           </b-row>
           <b-row class="advancedfilter closed">
-              <b-col class="advancedfilter_header" cols="12">
+              <b-col class="advancedfilter_header" cols="12" @click="filterOnClick">
                 <h1>Advanced filter</h1>
                 <img src="@/assets/images/dropdown.png" alt="">
               </b-col>
@@ -111,21 +111,13 @@ export default {
         }
     },
     methods: {
-        searchOnClick: function () {
-            document.querySelector(".search").classList.toggle("closed");
-            document.querySelector(".nav_search").classList.toggle("active");
-
-            document.querySelector(".faq").classList.add("closed");
-            document.querySelector(".nav_faq").classList.remove("active");
-        },
         filterOnClick: function () {
             document.querySelector(".advancedfilter").classList.toggle("closed");
+        },
+        closeSearch: function () {
+            document.querySelector(".search").classList.toggle("closed");
+            document.querySelector(".nav_search").classList.toggle("active");
         }
-    },
-    mounted: function() {
-        document.querySelector("nav .nav_search").addEventListener('click', this.searchOnClick);
-        document.querySelector(".search .close_search").addEventListener('click', this.searchOnClick);
-        document.querySelector(".advancedfilter_header").addEventListener('click', this.filterOnClick);
     }
 }
 </script>

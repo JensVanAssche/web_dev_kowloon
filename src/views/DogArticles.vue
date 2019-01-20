@@ -29,7 +29,7 @@
             </b-col>
           </b-row>
           <b-row class="article_filter">
-              <b-col cols="12" class="article_filter_header d-flex align-items-center mb-3">
+              <b-col cols="12" class="article_filter_header d-flex align-items-center mb-3" @click="filterOnClick">
                   <h2 class="title mb-0 mr-3">Filter</h2>
                   <img src="@/assets/images/dropdown.png" alt="">
               </b-col>
@@ -172,14 +172,7 @@ export default {
     filterOnClick: function () {
         document.querySelector(".article_filter_header").classList.toggle("opened");
         document.querySelector(".article_filter_content").classList.toggle("closed");
-    },
-    selectOnClick: function () {
-        document.querySelector(".select-dropdown").classList.toggle("closed");
     }
-  },
-  mounted: function() {
-    document.querySelector(".article_filter_header").addEventListener('click', this.filterOnClick);
-    document.querySelector(".select-selected").addEventListener('click', this.selectOnClick);
   }
 }
 </script>

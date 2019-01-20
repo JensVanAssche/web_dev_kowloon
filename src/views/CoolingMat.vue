@@ -100,8 +100,8 @@
             <b-col>
                 <h2 class="title">GERELATEERDE PRODUCTEN</h2>
                 <div class="carousel">
-                    <img src="@/assets/images/carousel_prev.png" class="carousel_prev" alt="">
-                    <img src="@/assets/images/carousel_next.png" class="carousel_next" alt="">
+                    <img src="@/assets/images/carousel_prev.png" class="carousel_prev" alt="" @click="carouselPrev">
+                    <img src="@/assets/images/carousel_next.png" class="carousel_next" alt="" @click="carouselNext">
                     <carousel :per-page="4" :paginationEnabled="false" :scrollPerPage="false" :navigate-to="activeSlide" >
                         <slide>
                             <ItemThumbnailSmall :details="false" :dots="false"></ItemThumbnailSmall>
@@ -200,9 +200,6 @@ export default {
     ItemThumbnailSmall
   },
   methods: {
-    faqOnClick: function () {
-      document.querySelector(".faq-question").classList.toggle("collapsed");
-    },
     carouselPrev: function () {
         if (this.activeSlide > 0) {
             this.activeSlide -= 1;
@@ -230,11 +227,6 @@ export default {
     activateImage(imageIndex) {
         this.activeImage = imageIndex;
     }
-  },
-  mounted: function() {
-    document.querySelector(".faq-header").addEventListener('click', this.faqOnClick);
-    document.querySelector(".carousel_prev").addEventListener('click', this.carouselPrev);
-    document.querySelector(".carousel_next").addEventListener('click', this.carouselNext);
   },
   computed: {
     currentImage() {

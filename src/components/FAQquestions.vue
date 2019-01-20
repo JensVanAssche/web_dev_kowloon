@@ -39,7 +39,7 @@ export default {
     },
     methods: {
         toggleFaq(id) {
-        this.activeFaq === id ? this.activeFaq = '' : this.activeFaq = id
+            this.activeFaq === id ? this.activeFaq = '' : this.activeFaq = id
         }
     },
 }
